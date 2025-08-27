@@ -6,7 +6,7 @@ class Background extends SpriteComponent with HasGameRef<FlappyBirdGame> {
 
   @override
   Future<void> onLoad() async {
-    sprite = await Sprite.load('background.png');
+    sprite = await Sprite.load('background_2.jpeg');
 
     // 👇 Make background fit the whole game size
     size = gameRef.size;

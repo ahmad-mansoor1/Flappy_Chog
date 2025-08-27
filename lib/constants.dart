@@ -7,7 +7,7 @@ const double birdHeight = 40;
 final double gravity = 700;
 final double jumpStrength = -200;
 
-const double groundHeight = 200;
+const double groundHeight = 100;
 
 const double groundScrollSpeed = 200;
 

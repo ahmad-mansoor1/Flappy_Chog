@@ -14,15 +14,15 @@ class ScoreText extends TextComponent with HasGameRef<FlappyBirdGame> {
 
   @override
   Future<void> onLoad() async {
-    final fontSizeMobile = gameRef.size.x * 0.08;
-    final fontSizeDesktop = gameRef.size.x * 0.04;
+    final fontSizeMobile = gameRef.size.x * 0.05;
+    final fontSizeDesktop = gameRef.size.x * 0.02;
 
     textRenderer = TextPaint(
       style: TextStyle(color: Colors.grey.shade900, fontSize: isMobile ? fontSizeMobile : fontSizeDesktop, fontWeight: FontWeight.bold),
     );
 
     anchor = Anchor.topCenter;
-    position = Vector2(gameRef.size.x / 2, gameRef.size.y - size.y - 50);
+    position = Vector2(gameRef.size.x / 2, gameRef.size.y - size.y - 30);
 
     priority = 5;
   }

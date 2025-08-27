@@ -1,82 +1,3 @@
-// import 'package:flame/components.dart';
-// import 'package:flutter/material.dart';
-//
-// import '../ui/flappy_bird_game.dart';
-//
-// class ScoreText extends TextComponent with HasGameRef<FlappyBirdGame> {
-//   ScoreText() : super(
-//       text: '0',
-//     textRenderer: TextPaint(
-//       style: TextStyle(
-//         color: Colors.grey.shade900,
-//         fontSize: 50,
-//       )
-//     )
-//   );
-//
-//   @override
-//   Future<void> onLoad() async {
-//     position = Vector2((gameRef.size.x - size.x) / 4, gameRef.size.y - size.y - 50);
-//   }
-//
-//   @override
-//   void update(double dt) {
-//     // final newText = gameRef.score.toString();
-//     final newText = 'Moo: ${gameRef.score}';
-//     if (text != newText) {
-//       text = newText;
-//     }
-//   }
-// }
-
-
-// import 'package:flame/components.dart';
-// import 'package:flutter/material.dart';
-//
-// import '../ui/flappy_bird_game.dart';
-//
-// class ScoreText extends TextComponent with HasGameRef<FlappyBirdGame> {
-//   final bool isMobile;
-//
-//   ScoreText(this.isMobile)
-//       : super(
-//     text: '0',
-//   );
-//
-//
-//
-//
-//   @override
-//   Future<void> onLoad() async {
-//     // calculate font size based on screen width
-//     final fontSizeMobile = gameRef.size.x * 0.08; // 8% of screen width
-//     final fontSizeDesktop = gameRef.size.x * 0.04; // 8% of screen width
-//
-//     textRenderer = TextPaint(
-//       style: TextStyle(
-//         color: Colors.grey.shade900,
-//         fontSize: isMobile ? fontSizeMobile : fontSizeDesktop,
-//         fontWeight: FontWeight.bold,
-//       ),
-//     );
-//
-//     // set anchor to top-center
-//     anchor = Anchor.topCenter;
-//     position = Vector2(gameRef.size.x / 2, gameRef.size.y - size.y - 50);
-//
-//     priority = 5; // keep on top
-//   }
-//
-//   @override
-//   void update(double dt) {
-//     final newText = 'Moo: ${gameRef.score}';
-//     if (text != newText) {
-//       text = newText;
-//     }
-//   }
-// }
-
-
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
@@ -88,8 +9,7 @@ class ScoreText extends TextComponent with HasGameRef<FlappyBirdGame> {
 
   bool get isMobile {
     if (kIsWeb) return false; // treat web as desktop
-    return defaultTargetPlatform == TargetPlatform.iOS ||
-        defaultTargetPlatform == TargetPlatform.android;
+    return defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.android;
   }
 
   @override
@@ -98,11 +18,7 @@ class ScoreText extends TextComponent with HasGameRef<FlappyBirdGame> {
     final fontSizeDesktop = gameRef.size.x * 0.04;
 
     textRenderer = TextPaint(
-      style: TextStyle(
-        color: Colors.grey.shade900,
-        fontSize: isMobile ? fontSizeMobile : fontSizeDesktop,
-        fontWeight: FontWeight.bold,
-      ),
+      style: TextStyle(color: Colors.grey.shade900, fontSize: isMobile ? fontSizeMobile : fontSizeDesktop, fontWeight: FontWeight.bold),
     );
 
     anchor = Anchor.topCenter;

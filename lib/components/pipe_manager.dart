@@ -22,7 +22,6 @@ class PipeManager extends Component with HasGameRef<FlappyBirdGame> {
   void newPipe() {
     final double screenHeight = gameRef.size.y;
 
-
     final double mixPipeHeight = screenHeight - groundHeight - pipeGap - minPipeHeight;
 
     // Bottom Pipe Height

@@ -6,8 +6,6 @@ import 'package:flutter/foundation.dart';
 import '../ui/flappy_bird_game.dart';
 
 class Ground extends SpriteComponent with HasGameRef<FlappyBirdGame>, CollisionCallbacks {
-
-
   Ground() : super();
 
   // bool get isMobile {
@@ -18,7 +16,6 @@ class Ground extends SpriteComponent with HasGameRef<FlappyBirdGame>, CollisionC
 
   @override
   Future<void> onLoad() async {
-
     // final groundHeightMobile = 100.0;
     // final groundHeightDesktop = 150.0;
 

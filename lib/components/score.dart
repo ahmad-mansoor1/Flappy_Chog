@@ -29,7 +29,7 @@ class ScoreText extends TextComponent with HasGameRef<FlappyBirdGame> {
 
   @override
   void update(double dt) {
-    final newText = 'Moo Score: ${gameRef.score}';
+    final newText = 'Score: ${gameRef.score}';
     if (text != newText) {
       text = newText;
     }
